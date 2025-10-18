@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Zen+Dots&display=swap');
+
 /*--Base--*/
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
-    font-family: Arial, san-serif;
+    font-family: "Domine", serif;
     background-color: #1c1c1c;
     color: #f0f0f0;
     line-height: 1.6;
+}
+h2 {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal
 }
 a {
     color: #00c4ff;
@@ -23,7 +30,11 @@ a {
 
 /*--Header/Nav--*/
 header {
-    border-bottom: 1px soild #2a2a2a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1c1c1c; 
+  border-bottom: 1px solid #2a2a2a;
 }
 .topbar {
     display: flex;
@@ -32,24 +43,38 @@ header {
     padding: 16px 0;
 }
 .brand {
-    font-size: 1rem;
-    color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #f0f0f0;
 }
 .brand span {
     color: #aaa;
     font-weight: 400;
 }
+.logo {
+  height: 50px;   
+  width: auto;
+  border-radius: 6px; 
+}
 nav a {
-    margin-left: 16px;
-    color: #aaa;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #aaa;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 nav a:hover {
     color: #00c4ff;
     background: #232323;
 }
 nav a.active {
-    color: #111;
-    background: #00c4ff;
+  color: #111;
+  background: #00c4ff;
+  box-shadow: 0 0 12px #00c4ff; /* glow effect */
+  font-weight: bold;
 }
 
 /*--Hero/Headings--*/
@@ -71,6 +96,7 @@ nav a.active {
     background: #00c4ff;
     color: #111;
     border-radius: 6px;
+    box-shadow: 0 0 6px #00c4ff;
 }
 
 /*--Cards--*/
@@ -183,29 +209,6 @@ nav a.active {
     text-align: center;
 }
 
-/*--Simple Form--*/
-form {
-    max-width: 520px;
-    margin: 0 auto;
-}
-label {
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 4px;
-    color: #ccc;
-}
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #333;
-    background: #222;
-    color: #eee;
-}
-button {
-    margin-top: 12px;
-}
-
 /*--Footer--*/
 footer {
     text-align: center;
@@ -261,4 +264,75 @@ footer a:hover {
 }
 @media (max-width: 720px) {
   .about-photo { width: 100%; }
+}
+
+/* ---- Contact Form Styling ---- */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #1e1e1e;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+form label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #e6e6e6;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #262626;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #00c4ff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 196, 255, 0.4);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+/* Radio + Checkbox inline */
+form input[type="radio"],
+form input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+form p {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #e6e6e6;
+}
+
+/* Submit button (reuses .btn class) */
+form button.btn {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button.btn:hover {
+  background: #00a8d4;
 }
