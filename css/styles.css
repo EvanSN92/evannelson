@@ -19,6 +19,16 @@ h2 {
 h2 span {
   color: #00c4ff;
 }
+.blue {
+  color: #00c4ff;            
+  transition: all 0.3s ease; 
+}
+.blue:hover {
+  text-shadow: 0 0 10px #00c4ff, 
+               0 0 20px #00c4ff, 
+               0 0 30px #00c4ff;
+  color: #80e9ff; 
+}
 a {
     color: #00c4ff;
     text-decoration: none;
