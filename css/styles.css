@@ -475,3 +475,78 @@ form button.btn {
 form button.btn:hover {
   background: #00a8d4;
 }
+
+/* Mock Website */
+.project-overview {
+  padding: 80px 0;
+  text-align: left;
+  max-width: 900px;
+}
+.project-overview h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.2rem;
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.project-header img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+.project-info p {
+  color: #9FE8FF;
+  margin: 6px 0;
+}
+.project-description, .project-process, .project-pages, .project-results, .project-reflection {
+  margin-bottom: 40px;
+}
+.project-description p, .project-results p, .project-reflection p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+.project-process ul {
+  list-style: none;
+  padding: 0;
+}
+.project-process li {
+  color: #F9F7F1;
+  margin-bottom: 10px;
+}
+.page-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.page-item {
+  background: #14163C;
+  border: 1px solid #9FE8FF;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(159, 232, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.page-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(159, 232, 255, 0.3);
+}
+.page-item h4 {
+  color: #9FE8FF;
+  font-family: 'Cinzel Decorative', serif;
+  margin-bottom: 8px;
+}
+.page-item p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
