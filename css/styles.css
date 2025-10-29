@@ -16,6 +16,9 @@ h2 {
   font-weight: 400;
   font-style: normal
 }
+h2 span {
+  color: #00c4ff;
+}
 a {
     color: #00c4ff;
     text-decoration: none;
