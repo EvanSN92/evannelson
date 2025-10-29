@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Evan Nelson</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <a href="index.html"><img src="images/logo.png" alt="Portfolio Logo" class="logo"></a>
+      <span>Evan Nelson</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Projects</a>
+      <a href="about.html">About</a>
+      <a class="active"href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container section">
+    <h2 style="text-align:center; color: #00c4ff;">Get in Touch</h2>
+
+    <form action="https://formspree.io/f/xgvpkzvv" method="POST">
+
+      <!-- Name -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <!-- Email -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <!-- Subject -->
+      <label for="subject">Subject:</label>
+      <select id="subject" name="subject">
+        <option value="general">General Inquiry</option>
+        <option value="project">Project Proposal</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Services interested in (checkboxes) -->
+      <p>Services Interested In:</p>
+      <label><input type="checkbox" name="services" value="web"> Web Development</label>
+      <label><input type="checkbox" name="services" value="uxui"> UX/UI Design</label>
+      <label><input type="checkbox" name="services" value="branding"> Branding</label>
+
+      <!-- Budget -->
+      <label for="budget">Estimated Budget ($):</label>
+      <input type="number" id="budget" name="budget" min="0" step="100">
+
+      <!-- Timeline -->
+      <label for="timeline">Project Timeline:</label>
+      <input type="date" id="timeline" name="timeline">
+
+      <!-- Message -->
+      <label for="msg">Message:</label>
+      <textarea id="msg" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+      <!-- Submit -->
+      <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Evan Nelson</p>
+      <p>
+        <a href="mailto:evannelson.codes@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> |
+        <a href="https://www.linkedin.com/in/evan-nelson13/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> |
+        <a href="contact.html"><i class="fa-solid fa-id-card"></i> Contact</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
