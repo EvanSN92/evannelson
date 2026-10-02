@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Home | Evan Nelson</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Nelson | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
-        <div class="container topbar">
-            <div class="brand">
-                <a href="index.html"><img src="images/logo.png" alt="Portfolio Logo" class="logo"></a>
-                <span>Evan Nelson</span>
+        <h1>Evan Nelson</h1>
+        <nav>
+            <div class="logo">Portfolio.</div>
+            <ul class="nav-links">
+                <li><a href="#about">About.</a></li>
+                <li><a href="#projects">Projects.</a></li>
+                <li><a href="#contact">Contact.</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav>
-            <a class="active"href="index.html">Home</a>
-            <a href="portfolio.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-flex">
-                <div class="hero-image">
-                    <img src="images/avatarlogo.png" alt="Evan Nelson Portrait">
+    <main>
+        <!-- Hero Section -->
+         <section class="hero">
+            <div class="hero-content">
+                <h2>Hi, I'm a Web Designer / UI/UX Developer</h2>
+                <p>I'm a passionate web developer with a love for creating beautiful modern, clean web experiences.</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.png" alt="Evan Nelson">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a web designer and front-end developer with a passion for turning ideas into clean, modern digital experiences.
+                I like projects that have personality, wheather I'm building a bold apperal brand, a plant-focused app, or a community-driven website.
+                My work focuses on thoughtful design, responsive layouts, and smooth user experiences that not only look good but feel good as well. 
+                I'm always learning and experimenting and looking for new ways to make each project feel different from the last.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+         <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="images/project1.png" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>A brief description of Project 1.</p>
                 </div>
-                <div class="hero-text">
-                    <h2>Hi, I'm <span>Evan Nelson</span></h2>
-                    <h3>Front-End Developer & <span>UX/UI Designer</span></h3>
-                    <p>
-                        I create digital experiences that feel as good as they look. Where clean code, 
-                        thoughtful design, and storytelling come together. My goal is to build interfaces 
-                        that don’t just function, but *connect*. That spark emotion through precision, flow, and beauty.
-                    </p>
-                    <p>
-                        Every project I take on is a chance to blend creativity with logic, from 
-                        user-centered layouts to immersive web visuals that bring ideas to life.  
-                    </p>
-                    <div class="hero-buttons">
-                        <a class="btn" href="portfolio.html">View Projects</a>
-                        <a class="btn" href="contact.html">Get In Touch</a>
-                    </div>
+                <div class="project-card">
+                    <img src="images/project2.png" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>A brief description of Project 2.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3.png" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>A brief description of Project 3.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h3 style="text-align: center;">Featured Projects</h3>
-            <div class="cards">
-                <div class="card">
-                    <h4><a href="mocksite.html">Mock Website | Lorcana Expo</a></h4>
-                    <p>Component library with accessible color tokens and presets.</p>
-                    <p><strong>HTML - CSS</strong></p>
-                </div>
-
-                <div class="card">
-                    <h4>Graphic Design</h4>
-                    <p>Coming Soon.</p>
-                    <p><strong>Research - Wireframes - Prototype</strong></p>
-                </div>
-
-                <div class="card">
-                    <h4>Graphic Design</h4>
-                    <p>Coming Soon.</p>
-                    <p><strong>Research - Wireframes - Prototype</strong></p>
-                </div>
-            </div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>© 2025 Evan Nelson</p>
-            <p>
-                <a href="mailto:evannelson.codes@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> |
-                <a href="https://www.linkedin.com/in/evan-nelson13/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> |
-                <a href="contact.html"><i class="fa-solid fa-id-card"></i> Contact</a>
-            </p>
-        </div>
+        <p>&copy; 202 Evan Nelson. All rights reserved.</p>
     </footer>
 
+    <script src="java/script.js"></script>
 </body>
 </html>
