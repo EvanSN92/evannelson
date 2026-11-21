@@ -1,0 +1,103 @@
+/* Base colors and page width */
+:root {
+  --black: #131510;
+  --olive: #b3be87;
+  --text: #f4f4ed;
+  --muted: #c6c9bb;
+  --line: #434839;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--text);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+a { color: inherit; }
+a:hover { color: var(--olive); }
+a:focus-visible { outline: 3px solid var(--olive); outline-offset: 5px; }
+p { color: var(--muted); margin: 0; }
+h1, h2, h3 { line-height: 1.1; margin: 0; }
+
+header, nav, .contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand { font-weight: bold; font-size: 1.2rem; color: var(--olive); }
+header a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+/* About section */
+.intro {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 8%;
+  padding: 60px 0;
+}
+
+.role { color: var(--olive); font-weight: bold; }
+h1 { margin: 18px 0 24px; font-size: clamp(4rem, 9vw, 7rem); line-height: .9; letter-spacing: -.06em; }
+h1 span { color: var(--olive); }
+.about-title { font-size: 1.2rem; margin-bottom: 8px; }
+.intro p { max-width: 52ch; }
+
+.portrait {
+  width: 100%;
+  border-radius: 100px 4px 4px 4px;
+  border-bottom: 8px solid var(--olive);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 19px;
+  color: var(--black);
+  background: var(--olive);
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button:hover { background: var(--text); color: var(--black); }
+
+/* Project cards */
+#projects { border-top: 1px solid var(--line); padding: 40px 0 52px; }
+h2 { font-size: 2.2rem; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+article img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 4px; }
+h3 { margin: 15px 0 8px; font-size: 1.45rem; }
+h3 a { text-decoration-thickness: 1px; text-underline-offset: 5px; }
+h3 span { color: var(--olive); font-size: 1rem; }
+
+/* Contact and small screens */
+.contact { background: #303727; padding: 30px; margin-bottom: 32px; border-radius: 4px; }
+.contact p { margin-top: 8px; }
+.contact a { color: var(--olive); overflow-wrap: anywhere; }
+
+@media (max-width: 680px) {
+  .intro, .grid { grid-template-columns: 1fr; gap: 28px; }
+  .intro { padding: 36px 0; }
+  .portrait { max-width: 320px; }
+  nav { gap: 14px; }
+  .contact { padding: 24px; }
+}
